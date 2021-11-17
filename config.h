@@ -2,7 +2,6 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "st"
-#define TERMINALOLD "st"
 
 /* appearance */
 static unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -32,8 +31,8 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINALOLD, "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {TERMINALOLD, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
