@@ -15,7 +15,7 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=14", "JoyPixels:pixelsize=11:antialias=true:autohint=true"  };
+static char *fonts[]          = { "monospace:size=12","ttf-dejavu", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#222222";
 static char normfgcolor[]           = "#bbbbbb";
@@ -231,10 +231,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = +1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
-	{ MODKEY,			XK_Insert,	spawn,		SHCMD("mapscii") },
-	{ MODKEY,			XK_F1,		spawn,		SHCMD("btop") },
-	{ MODKEY,			XK_F2,		spawn,		SHCMD("speedtest") },
-	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
+	{ MODKEY,			XK_Insert,	spawn,		SHCMD(TERMINAL" -e mapscii") },	
+	{ MODKEY|ShiftMask,			XK_F1,		spawn,		SHCMD(TERMINAL " -e cava") },
+	{ MODKEY,			XK_F1,		spawn,		SHCMD(TERMINAL " -e btop") },
+	{ MODKEY,			XK_F2,		spawn,		SHCMD(TERMINAL " -e speedtest") },
+	{ MODKEY,			XK_F3,		spawn,		SHCMD(TERMINAL "displayselect") },
 	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
@@ -243,7 +244,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
 	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
 	{ MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
-	{ MODKEY,			XK_F12,		spawn,		SHCMD("gdu") },
+	{ MODKEY,			XK_F12,		spawn,		SHCMD(TERMINAL " -e gdu") },
 	/*{ MODKEY,			XK_F12,		spawn,		SHCMD("remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"") },*/
 	{ MODKEY,			XK_space,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
