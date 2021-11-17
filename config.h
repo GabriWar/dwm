@@ -3,6 +3,7 @@
 #define TERMINAL "st"
 #define TERMCLASS "st"
 
+
 /* appearance */
 static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 5;       /* snap pixel */
@@ -230,7 +231,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = +1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
-	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
+	{ MODKEY,			XK_Insert,	spawn,		SHCMD("mapscii") },
+	{ MODKEY,			XK_F1,		spawn,		SHCMD("btop") },
+	{ MODKEY,			XK_F2,		spawn,		SHCMD("speedtest") },
 	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
 	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
@@ -240,6 +243,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
 	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
 	{ MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
+	{ MODKEY,			XK_F12,		spawn,		SHCMD("gdu") },
 	/*{ MODKEY,			XK_F12,		spawn,		SHCMD("remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"") },*/
 	{ MODKEY,			XK_space,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
