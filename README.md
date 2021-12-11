@@ -7,7 +7,7 @@ Gabriwar's build of dwm
 This is suckless, mmmbud, the source code is the documentation! Check out [config.h](config.h).
 ## Patches and features
 
-- Clickable statusbar with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
+- Clickable statusbar with my build of [dwmblocks](https://github.com/GabriWar/dwmblocks).
 - Reads xresources colors/variables (i.e. works with `pywal`, etc.).
 - scratchpad: Accessible with mod+shift+enter.
 - New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
