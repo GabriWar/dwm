@@ -1,15 +1,10 @@
-# Luke's build of dwm
+Gabriwar's build of dwm
 
 ## FAQ
 
 > What are the bindings?
 
 This is suckless, mmmbud, the source code is the documentation! Check out [config.h](config.h).
-
-Okay, okay, actually I keep a readme in `larbs.mom` for my whole system, including the binds here.
-Press `super+F1` to view it in dwm (zathura is required for that binding).
-I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
-
 ## Patches and features
 
 - Clickable statusbar with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
@@ -24,9 +19,8 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 - swallow patch: if a program run from a terminal would make it inoperable, it temporarily takes its place to save space.
 
 ## Installation for newbs
-
 ```
-git clone https://github.com/LukeSmithxyz/dwm
+git clone https://github.com/GabriWar/dwm
 cd dwm
 sudo make install
 ```
