@@ -957,6 +957,7 @@ focus(Client *c)
 		if (!c) /* No windows found; check for available stickies */
 			for (c = selmon->stack; c && !ISVISIBLE(c); c = c->snext);
 	}
+	
 	if (selmon->sel && selmon->sel != c)
 		unfocus(selmon->sel, 0);
 	if (c) {
