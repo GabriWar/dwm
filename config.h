@@ -135,7 +135,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("") }, */
-	{ MODKEY|ShiftMask,			XK_apostrophe,	spawn,	SHCMD("dmenuunicode") },
+	{ MODKEY,			XK_grave,	spawn,	SHCMD("dmenuunicode") },
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
@@ -201,6 +201,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
+	{ MODKEY|ShiftMask, XK_apostrophe, togglesmartgaps, {0} },
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
